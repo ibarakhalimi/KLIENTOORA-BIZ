@@ -1,0 +1,30 @@
+/* ============================================================
+   נקודה · Radii & Elevation
+   Generous, rounded corners are core to the friendly feel.
+   Shadows are soft and purple-tinted — never neutral gray.
+   ============================================================ */
+:root {
+  /* ---- Corner radius ------------------------------------ */
+  --radius-xs:   6px;    /* chips, tiny tags */
+  --radius-sm:   10px;   /* buttons, inputs, nav items */
+  --radius-md:   14px;   /* icon tiles, small cards */
+  --radius-lg:   18px;   /* stat tiles */
+  --radius-xl:   22px;   /* primary cards / panels */
+  --radius-2xl:  28px;   /* hero / feature panels */
+  --radius-pill: 999px;  /* pills, avatars, toggles */
+
+  /* ---- Elevation · soft, purple-tinted ------------------ */
+  --shadow-xs:  0 1px 2px rgba(28,21,48,0.04);
+  --shadow-sm:  0 2px 8px rgba(28,21,48,0.05);
+  --shadow-md:  0 6px 18px rgba(28,21,48,0.08);
+  --shadow-lg:  0 14px 34px rgba(28,21,48,0.12);
+
+  /* ---- Brand glow · for primary buttons & hero panels --- */
+  --shadow-brand:    0 4px 14px rgba(91,33,182,0.35);
+  --shadow-brand-lg: 0 14px 34px rgba(91,33,182,0.38);
+
+  /* ---- Focus ring --------------------------------------- */
+  --ring-width: 3px;
+  --ring-color: rgba(124,58,237,0.35);
+  --ring: 0 0 0 var(--ring-width) var(--ring-color);
+}

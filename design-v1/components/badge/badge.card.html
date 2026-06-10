@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Badge" subtitle="טון רך / מלא · נקודת סטטוס · אייקון · דרגות" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 22px 24px; background: var(--surface); }
+  .grid { display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+  .cap { width: 70px; font: var(--weight-semibold) 11px var(--font-sans); color: var(--text-faint); }
+  .b { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: var(--radius-pill);
+    font: var(--weight-semibold) 12px var(--font-sans); line-height: 1.3; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  svg { width: 13px; height: 13px; }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="row"><span class="cap">רך</span>
+      <span class="b" style="background:var(--brand-subtle);color:var(--brand)">חדש</span>
+      <span class="b" style="background:var(--success-bg);color:var(--success)"><span class="dot"></span>פעיל</span>
+      <span class="b" style="background:var(--warning-bg);color:var(--amber-600)">ממתין</span>
+      <span class="b" style="background:var(--danger-bg);color:var(--danger)">בוטל</span>
+      <span class="b" style="background:var(--info-bg);color:var(--info)">טיוטה</span>
+    </div>
+    <div class="row"><span class="cap">מלא</span>
+      <span class="b" style="background:var(--brand);color:#fff">חדש</span>
+      <span class="b" style="background:var(--success);color:#fff">פעיל</span>
+      <span class="b" style="background:var(--accent-pink);color:#fff">חם 🔥</span>
+    </div>
+    <div class="row"><span class="cap">דרגות</span>
+      <span class="b" style="background:var(--purple-100);color:var(--purple-700)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.9-5 2.9 1-5.7-4-4 5.5-.8z"/></svg>ברונזה</span>
+      <span class="b" style="background:var(--purple-100);color:var(--purple-600)">כסף</span>
+      <span class="b" style="background:var(--amber-100);color:var(--amber-600)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.5 5.5L20 9.3l-4 4 1 5.7-5-2.9-5 2.9 1-5.7-4-4 5.5-.8z"/></svg>זהב</span>
+      <span class="b" style="background:var(--brand);color:#fff">פלטינה</span>
+    </div>
+  </div>
+</body></html>

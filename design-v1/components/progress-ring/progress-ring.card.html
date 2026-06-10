@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" viewport="700x150" name="ProgressRing" subtitle="טבעות התקדמות ליעדי החודש" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface); display: flex; gap: 30px; align-items: center; }
+  .goal { display: flex; align-items: center; gap: 16px; }
+  .ring { position: relative; }
+  .ctr { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font: var(--weight-extrabold) 15px var(--font-sans); color: var(--text-primary); }
+  .gl { font: var(--weight-semibold) 14px var(--font-sans); color: var(--text-primary); }
+  .gs { font: 13px var(--font-sans); color: var(--text-muted); margin-top: 3px; }
+</style></head>
+<body>
+  <div class="goal">
+    <div class="ring"><svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--brand-subtle-2)" stroke-width="7"/><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--brand)" stroke-width="7" stroke-linecap="round" stroke-dasharray="151 204" transform="rotate(-90 36 36)"/></svg><div class="ctr">74%</div></div>
+    <div><div class="gl">חברים חדשים</div><div class="gs"><b style="color:var(--brand)">184</b> מתוך 250</div></div>
+  </div>
+  <div class="goal">
+    <div class="ring"><svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--accent-amber-bg)" stroke-width="7"/><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--accent-amber)" stroke-width="7" stroke-linecap="round" stroke-dasharray="159 204" transform="rotate(-90 36 36)"/></svg><div class="ctr">78%</div></div>
+    <div><div class="gl">מימושי הטבות</div><div class="gs"><b style="color:var(--accent-amber)">312</b> מתוך 400</div></div>
+  </div>
+  <div class="goal">
+    <div class="ring"><svg width="72" height="72" viewBox="0 0 72 72"><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--accent-teal-bg)" stroke-width="7"/><circle cx="36" cy="36" r="32.5" fill="none" stroke="var(--accent-teal)" stroke-width="7" stroke-linecap="round" stroke-dasharray="194 204" transform="rotate(-90 36 36)"/></svg><div class="ctr">95%</div></div>
+    <div><div class="gl">שביעות רצון</div><div class="gs"><b style="color:var(--accent-teal)">95%</b> מתוך 100%</div></div>
+  </div>
+</body></html>

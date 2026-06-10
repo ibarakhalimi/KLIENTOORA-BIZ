@@ -1,0 +1,84 @@
+/* ============================================================
+   נקודה · Semantic tokens
+   The role layer. Build every UI against THESE names, never the
+   raw --purple-600 / --neutral-500 scales directly. Swapping a
+   brand colour, going dark, or re-theming = edit this file only.
+   ============================================================ */
+:root {
+  /* ---- Brand -------------------------------------------- */
+  --brand:            var(--purple-800);
+  --brand-hover:      var(--purple-700);
+  --brand-active:     var(--purple-900);
+  --brand-strong:     var(--purple-950);
+  --brand-subtle:     var(--purple-50);   /* tinted backgrounds */
+  --brand-subtle-2:   var(--purple-100);
+  --brand-muted:      var(--purple-400);  /* secondary brand fills */
+  --brand-on:         var(--white);       /* text/icon on brand */
+
+  /* ---- Surfaces ----------------------------------------- */
+  --bg:               var(--neutral-50);  /* app background */
+  --surface:          var(--white);       /* cards, sheets */
+  --surface-sunken:   var(--neutral-100); /* tracks, insets, segmented bg */
+  --surface-inverse:  var(--neutral-900); /* dark panels */
+
+  /* ---- Borders ------------------------------------------ */
+  --border:           var(--neutral-200);
+  --border-strong:    var(--neutral-300);
+  --border-on-brand:  rgba(255,255,255,0.22);
+
+  /* ---- Text --------------------------------------------- */
+  --text-primary:     var(--neutral-900); /* headings, key numbers */
+  --text-body:        var(--neutral-700); /* default copy */
+  --text-secondary:   var(--neutral-600);
+  --text-muted:       var(--neutral-500); /* labels, captions */
+  --text-faint:       var(--neutral-400); /* hints, placeholders */
+  --text-on-brand:    var(--white);
+  --text-on-brand-dim:rgba(255,255,255,0.78);
+
+  /* ---- Accents (decorative / categorical) --------------- */
+  --accent-amber:     var(--amber-500);   --accent-amber-bg: var(--amber-100);
+  --accent-pink:      var(--pink-500);    --accent-pink-bg:  var(--pink-100);
+  --accent-teal:      var(--teal-600);    --accent-teal-bg:  var(--teal-100);
+  --accent-purple:    var(--purple-600);  --accent-purple-bg:var(--purple-100);
+
+  /* ---- Status / feedback -------------------------------- */
+  --success:    var(--green-500);   --success-bg: var(--green-100);
+  --warning:    var(--amber-500);   --warning-bg: var(--amber-100);
+  --danger:     var(--red-500);     --danger-bg:  var(--red-100);
+  --info:       var(--blue-500);    --info-bg:    var(--blue-100);
+
+  /* ---- Data-viz sequence (charts, tiers, segments) ------ */
+  --viz-1: var(--purple-600);
+  --viz-2: var(--amber-500);
+  --viz-3: var(--teal-600);
+  --viz-4: var(--pink-500);
+  --viz-5: var(--purple-300);
+  --viz-track: var(--neutral-100);
+
+  /* ---- Loyalty tiers (domain semantic) ------------------ */
+  --tier-bronze:   var(--purple-300);
+  --tier-silver:   var(--purple-400);
+  --tier-gold:     var(--amber-500);
+  --tier-platinum: var(--purple-800);
+}
+
+/* ------------------------------------------------------------
+   Optional dark surface scope. Apply data-theme="dark" to any
+   subtree (e.g. a hero panel) to flip text/surface roles without
+   touching brand. Extend as the product grows.
+   ------------------------------------------------------------ */
+[data-theme="dark"] {
+  --bg:             var(--neutral-900);
+  --surface:        var(--neutral-800);
+  --surface-sunken: rgba(255,255,255,0.06);
+  --border:         rgba(255,255,255,0.12);
+  --border-strong:  rgba(255,255,255,0.2);
+  --text-primary:   var(--white);
+  --text-body:      rgba(255,255,255,0.86);
+  --text-secondary: rgba(255,255,255,0.7);
+  --text-muted:     rgba(255,255,255,0.6);
+  --text-faint:     rgba(255,255,255,0.45);
+  --brand:          var(--purple-500);
+  --brand-hover:    var(--purple-400);
+  --brand-subtle:   rgba(139,92,246,0.16);
+}

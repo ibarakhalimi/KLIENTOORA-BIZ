@@ -1,0 +1,18 @@
+<!-- @dsCard group="Spacing" viewport="700x150" name="Spacing scale" subtitle="רשת 4px — ריווח, gap ומרווחים" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 22px; background: var(--surface); display: flex; align-items: flex-end; gap: 14px; flex-wrap: wrap; }
+  .s { text-align: center; }
+  .bar { background: var(--brand-subtle-2); border-radius: var(--radius-xs); width: 28px; }
+  .v { font: var(--weight-bold) 11px var(--font-sans); color: var(--brand); margin-top: 7px; }
+  .t { font: 10px var(--font-sans); color: var(--text-faint); }
+</style></head>
+<body>
+  <div id="wrap" style="display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap"></div>
+  <script>
+    const steps = [['2',4],['4',8],['6',12],['8',16],['10',20],['12',24],['16',32],['20',40],['24',48]];
+    document.getElementById('wrap').innerHTML = steps.map(([n,px])=>
+      `<div class="s"><div class="bar" style="height:${px}px"></div><div class="v">${px}</div><div class="t">space-${n}</div></div>`).join('');
+  </script>
+</body></html>

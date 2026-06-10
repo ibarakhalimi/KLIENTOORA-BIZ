@@ -1,0 +1,15 @@
+<!-- @dsCard group="Colors" viewport="700x130" name="Signature gradients" subtitle="ההירו של B — מותג, עומק וזוהר" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px 20px; background: var(--surface); display: flex; gap: 14px; }
+  .g { flex: 1; height: 88px; border-radius: var(--radius-xl); position: relative; overflow: hidden;
+    display: flex; align-items: flex-end; padding: 12px 14px; color: #fff; font: var(--weight-semibold) 12px var(--font-sans); }
+  .glow { background: var(--neutral-900); }
+  .glow::before { content: ''; position: absolute; inset: 0; background: var(--gradient-glow); }
+</style></head>
+<body>
+  <div class="g" style="background:var(--gradient-brand)">--gradient-brand</div>
+  <div class="g" style="background:var(--gradient-deep)">--gradient-deep</div>
+  <div class="g glow"><span style="position:relative">--gradient-glow</span></div>
+</body></html>

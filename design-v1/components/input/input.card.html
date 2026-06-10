@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x180" name="Input" subtitle="חיפוש · שדה עם תווית · focus · disabled" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface); display: grid; grid-template-columns: 1fr 1fr; gap: 22px 26px; align-items: start; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .lab { font: var(--weight-semibold) 13px var(--font-sans); color: var(--text-body); }
+  .box { display: flex; align-items: center; gap: 9px; background: var(--surface); border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm); padding: 0 13px; height: 44px; }
+  .box.focus { border-color: var(--brand); box-shadow: var(--ring); }
+  .box.dis { opacity: .55; }
+  .box input { flex: 1; min-width: 0; border: none; outline: none; background: transparent;
+    font: 14px var(--font-sans); color: var(--text-primary); }
+  .box input::placeholder { color: var(--text-faint); }
+  .hint { font: 12px var(--font-sans); color: var(--text-muted); }
+  svg { width: 18px; height: 18px; color: var(--text-faint); flex-shrink: 0; }
+</style></head>
+<body>
+  <div class="field"><span class="lab">חיפוש</span>
+    <div class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg><input placeholder="חיפוש חבר, הטבה…"></div></div>
+  <div class="field"><span class="lab">שם המבצע</span>
+    <div class="box focus"><input value="קפה שני חינם" ></div>
+    <span class="hint">יוצג לחברים באפליקציה</span></div>
+  <div class="field"><span class="lab">נקודות לחבר</span>
+    <div class="box"><input type="text" value="250"></div></div>
+  <div class="field"><span class="lab">קוד קופון (נעול)</span>
+    <div class="box dis"><input value="NEKUDA-2026" disabled></div></div>
+</body></html>

@@ -1,0 +1,20 @@
+<!-- @dsCard group="Components" viewport="700x250" name="Card" subtitle="flat · elevated · brand · deep" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 22px; background: var(--neutral-50); display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+  .card { border-radius: var(--radius-xl); padding: 20px; position: relative; overflow: hidden; font-family: var(--font-sans); }
+  .flat { background: var(--surface); border: 1px solid var(--border); }
+  .elev { background: var(--surface); box-shadow: var(--shadow-sm); }
+  .brand { background: var(--gradient-brand); box-shadow: var(--shadow-brand-lg); color: #fff; }
+  .deep { background: var(--gradient-deep); box-shadow: var(--shadow-lg); color: #fff; }
+  .t { font: var(--weight-bold) 16px var(--font-sans); }
+  .s { font-size: 13px; margin-top: 3px; }
+  .circle { position: absolute; border-radius: 50%; }
+</style></head>
+<body>
+  <div class="card flat"><div class="t" style="color:var(--text-primary)">flat</div><div class="s" style="color:var(--text-muted)">משטח שקט עם גבול — לאזורים מקוננים</div></div>
+  <div class="card elev"><div class="t" style="color:var(--text-primary)">elevated</div><div class="s" style="color:var(--text-muted)">ברירת מחדל — לבן עם צל רך</div></div>
+  <div class="card brand"><div class="circle" style="top:-30px;left:60px;width:120px;height:120px;background:rgba(255,255,255,0.1)"></div><div class="t">brand</div><div class="s" style="color:rgba(255,255,255,0.85)">הירו ברכה — גרדיאנט מותג</div></div>
+  <div class="card deep"><div class="circle" style="top:-20px;left:-20px;width:110px;height:110px;background:rgba(255,255,255,0.06)"></div><div class="t">deep</div><div class="s" style="color:rgba(255,255,255,0.78)">כרטיס פיצ׳ר כהה — הטבה / פרומו</div></div>
+</body></html>

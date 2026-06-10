@@ -1,0 +1,71 @@
+/* ============================================================
+   נקודה · Colors
+   Brand-led purple scale + warm accents + purple-tinted neutrals.
+   All raw values live here. Semantic aliases live in semantic.css —
+   build UIs against the semantic names so re-theming never touches markup.
+   ============================================================ */
+:root {
+  /* ---- Brand · Purple ------------------------------------ */
+  --purple-50:  #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;   /* ← primary brand */
+  --purple-900: #4a1d96;
+  --purple-950: #2e1065;
+
+  /* ---- Accent · Amber (points / rewards / gold) --------- */
+  --amber-50:  #fffbeb;
+  --amber-100: #fef3c7;
+  --amber-300: #fcd34d;
+  --amber-500: #f59e0b;
+  --amber-600: #d97706;
+
+  /* ---- Accent · Pink (highlights / celebration) --------- */
+  --pink-50:  #fdf2f8;
+  --pink-100: #fce7f3;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+
+  /* ---- Accent · Teal (fresh / new / positive) ----------- */
+  --teal-50:  #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+
+  /* ---- Semantic hues ------------------------------------ */
+  --green-100: #dcfce7;
+  --green-500: #16a34a;
+  --green-600: #15803d;
+  --red-100:   #ffe4e6;
+  --red-500:   #e11d48;
+  --red-600:   #be123c;
+  --blue-100:  #dbeafe;
+  --blue-500:  #2563eb;
+
+  /* ---- Neutral · purple-tinted slate -------------------- */
+  --neutral-0:   #ffffff;
+  --neutral-50:  #f7f5fc;   /* app background */
+  --neutral-100: #f3f1f9;   /* sunken / track */
+  --neutral-200: #ece9f4;   /* hairline borders */
+  --neutral-300: #ddd9ea;   /* strong borders */
+  --neutral-400: #9b97ad;   /* faint text / icons */
+  --neutral-500: #6b6880;   /* muted text */
+  --neutral-600: #4a4263;   /* secondary text */
+  --neutral-700: #3b3551;   /* body text */
+  --neutral-800: #2a2440;
+  --neutral-900: #1c1530;   /* ink / headings */
+
+  /* ---- Static ------------------------------------------- */
+  --white: #ffffff;
+  --black: #14101f;
+
+  /* ---- Signature gradients (B's hero language) ---------- */
+  --gradient-brand: linear-gradient(115deg, var(--purple-800) 0%, var(--purple-600) 55%, var(--purple-500) 100%);
+  --gradient-deep:  linear-gradient(140deg, var(--neutral-900) 0%, var(--purple-800) 90%);
+  --gradient-glow:  radial-gradient(circle at 70% 0%, rgba(167,139,250,0.35), transparent 60%);
+}

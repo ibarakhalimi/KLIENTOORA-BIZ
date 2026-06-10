@@ -1,0 +1,17 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Elevation & focus" subtitle="צללים רכים בגוון סגול + זוהר מותג" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px 22px; background: var(--neutral-50); display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .s { text-align: center; }
+  .box { width: 92px; height: 64px; background: var(--surface); border-radius: var(--radius-lg); }
+  .v { font: var(--weight-semibold) 11px var(--font-sans); color: var(--text-secondary); margin-top: 11px; }
+  .brand { background: var(--brand); }
+</style></head>
+<body>
+  <div class="s"><div class="box" style="box-shadow:var(--shadow-sm)"></div><div class="v">shadow-sm</div></div>
+  <div class="s"><div class="box" style="box-shadow:var(--shadow-md)"></div><div class="v">shadow-md</div></div>
+  <div class="s"><div class="box" style="box-shadow:var(--shadow-lg)"></div><div class="v">shadow-lg</div></div>
+  <div class="s"><div class="box brand" style="box-shadow:var(--shadow-brand)"></div><div class="v">shadow-brand</div></div>
+  <div class="s"><div class="box" style="box-shadow:var(--ring)"></div><div class="v">--ring (focus)</div></div>
+</body></html>

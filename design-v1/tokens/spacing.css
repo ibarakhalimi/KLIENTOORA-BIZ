@@ -1,0 +1,36 @@
+/* ============================================================
+   נקודה · Spacing, Sizing & Layout
+   4px base grid. Use the --space-* steps for padding, gaps and
+   margins everywhere so rhythm stays consistent.
+   ============================================================ */
+:root {
+  --space-0:   0;
+  --space-1:   2px;
+  --space-2:   4px;
+  --space-3:   6px;
+  --space-4:   8px;
+  --space-5:   10px;
+  --space-6:   12px;
+  --space-8:   16px;
+  --space-10:  20px;
+  --space-12:  24px;
+  --space-14:  28px;
+  --space-16:  32px;
+  --space-20:  40px;
+  --space-24:  48px;
+  --space-32:  64px;
+  --space-40:  80px;
+
+  /* ---- Container & layout ------------------------------- */
+  --gutter:        24px;   /* default gap between cards */
+  --page-pad:      26px;   /* dashboard outer padding */
+  --sidebar-w:     244px;  /* full labelled sidebar */
+  --rail-w:        78px;   /* icon-only rail */
+  --content-max:   1360px; /* dashboard design width */
+  --field-h:       44px;   /* min input / tap target */
+
+  /* ---- Border widths ------------------------------------ */
+  --border-thin:   1px;
+  --border-medium: 1.5px;
+  --border-thick:  2.5px;
+}

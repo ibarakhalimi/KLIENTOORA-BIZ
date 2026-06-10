@@ -1,0 +1,26 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Accents" subtitle="ענבר, ורוד וטורקיז — נגיעות כיף וקטגוריות דאטה" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px 20px; background: var(--surface); }
+  .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .acc { display: flex; flex-direction: column; gap: 8px; }
+  .name { font: var(--weight-semibold) 12px var(--font-sans); color: var(--text-primary); }
+  .pair { display: flex; gap: 8px; }
+  .chip { height: 46px; border-radius: var(--radius-md); flex: 1; display: flex; align-items: flex-end; padding: 6px 8px;
+    font: var(--weight-medium) 10px var(--font-sans); }
+  .hex { font: 10px var(--font-sans); color: var(--text-faint); }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="acc"><div class="name">Amber · נקודות / הטבות</div>
+      <div class="pair"><div class="chip" style="background:var(--amber-500);color:#fff">500</div><div class="chip" style="background:var(--amber-100);color:var(--amber-600)">100</div></div>
+      <div class="hex">--accent-amber · #f59e0b</div></div>
+    <div class="acc"><div class="name">Pink · חגיגה</div>
+      <div class="pair"><div class="chip" style="background:var(--pink-500);color:#fff">500</div><div class="chip" style="background:var(--pink-100);color:var(--pink-600)">100</div></div>
+      <div class="hex">--accent-pink · #ec4899</div></div>
+    <div class="acc"><div class="name">Teal · חדש / רענן</div>
+      <div class="pair"><div class="chip" style="background:var(--teal-600);color:#fff">600</div><div class="chip" style="background:var(--teal-100);color:var(--teal-600)">100</div></div>
+      <div class="hex">--accent-teal · #0d9488</div></div>
+  </div>
+</body></html>

@@ -1,0 +1,51 @@
+/* ============================================================
+   נקודה · Base
+   Minimal, unopinionated resets + document defaults wired to
+   tokens. Versatile by design — sets sane defaults, locks nothing.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-base);
+  color: var(--text-body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings inherit the display family + tight tracking by default */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+}
+
+p { margin: 0; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { color: var(--brand-hover); }
+
+button { font-family: inherit; }
+
+/* Tabular figures for anything in a data context */
+table, .t-num, [data-num] { font-variant-numeric: var(--num-tabular); }
+
+/* Shared, accessible focus ring */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* Thin, friendly scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--neutral-300) transparent; }
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-thumb { background: var(--neutral-300); border-radius: var(--radius-pill); }
+::-webkit-scrollbar-track { background: transparent; }

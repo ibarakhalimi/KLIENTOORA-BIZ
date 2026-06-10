@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Status & Tiers" subtitle="משוב מערכת ודרגות מועדון סמנטיות" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px 20px; background: var(--surface); display: flex; gap: 26px; }
+  .col { flex: 1; }
+  .h { font: var(--weight-semibold) 11px var(--font-sans); color: var(--text-faint); margin-bottom: 10px; letter-spacing: 0.3px; }
+  .item { display: flex; align-items: center; gap: 9px; margin-bottom: 9px; }
+  .pill { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: var(--radius-pill);
+    font: var(--weight-semibold) 11.5px var(--font-sans); }
+  .dot { width: 9px; height: 9px; border-radius: 3px; }
+  .nm { font: var(--weight-medium) 12px var(--font-sans); color: var(--text-body); }
+</style></head>
+<body>
+  <div class="col">
+    <div class="h">STATUS</div>
+    <div class="item"><span class="pill" style="background:var(--success-bg);color:var(--success)">הצלחה</span><span class="nm">--success</span></div>
+    <div class="item"><span class="pill" style="background:var(--warning-bg);color:var(--amber-600)">אזהרה</span><span class="nm">--warning</span></div>
+    <div class="item"><span class="pill" style="background:var(--danger-bg);color:var(--danger)">שגיאה</span><span class="nm">--danger</span></div>
+    <div class="item"><span class="pill" style="background:var(--info-bg);color:var(--info)">מידע</span><span class="nm">--info</span></div>
+  </div>
+  <div class="col">
+    <div class="h">דרגות מועדון</div>
+    <div class="item"><span class="dot" style="background:var(--tier-bronze)"></span><span class="nm">ברונזה · --tier-bronze</span></div>
+    <div class="item"><span class="dot" style="background:var(--tier-silver)"></span><span class="nm">כסף · --tier-silver</span></div>
+    <div class="item"><span class="dot" style="background:var(--tier-gold)"></span><span class="nm">זהב · --tier-gold</span></div>
+    <div class="item"><span class="dot" style="background:var(--tier-platinum)"></span><span class="nm">פלטינה · --tier-platinum</span></div>
+  </div>
+</body></html>

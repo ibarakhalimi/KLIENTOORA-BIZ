@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Brand · Purple" subtitle="הסקאלה הסגולה — 800 הוא צבע המותג" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px 20px; background: var(--surface); }
+  .row { display: flex; gap: 8px; }
+  .sw { flex: 1; }
+  .chip { height: 56px; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.04); }
+  .star { position: relative; }
+  .star::after { content: '★ primary'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #fff; font: var(--weight-semibold) 11px var(--font-sans); }
+  .lbl { font: var(--weight-semibold) 11px var(--font-sans); color: var(--text-body); margin-top: 7px; }
+  .hex { font: var(--weight-regular) 10px var(--font-sans); color: var(--text-faint); margin-top: 1px; letter-spacing: 0.2px; direction: ltr; }
+</style></head>
+<body>
+  <div class="row" id="row"></div>
+  <script>
+    const steps = [50,100,200,300,400,500,600,700,800,900,950];
+    document.getElementById('row').innerHTML = steps.map(s => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue('--purple-'+s).trim();
+      return `<div class="sw"><div class="chip ${s===800?'star':''}" style="background:${v}"></div>
+        <div class="lbl">${s}</div><div class="hex">${v}</div></div>`;
+    }).join('');
+  </script>
+</body></html>

@@ -1,0 +1,15 @@
+<!-- @dsCard group="Components" viewport="700x120" name="SegmentedTabs" subtitle="מתג מקטעים — פעיל מורם על צ׳יפ לבן" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 26px 24px; background: var(--surface); display: flex; gap: 26px; align-items: center; flex-wrap: wrap; }
+  .seg { display: inline-flex; gap: 4px; background: var(--surface-sunken); padding: 4px; border-radius: var(--radius-sm); }
+  .seg button { padding: 7px 16px; border-radius: var(--radius-xs); border: none; cursor: pointer;
+    font: var(--weight-semibold) 13px var(--font-sans); background: transparent; color: var(--text-muted); }
+  .seg button.on { background: var(--surface); color: var(--brand); box-shadow: var(--shadow-xs); }
+  .seg.sm button { padding: 6px 13px; font-size: 12.5px; }
+</style></head>
+<body>
+  <div class="seg"><button class="on">שבוע</button><button>חודש</button><button>רבעון</button></div>
+  <div class="seg sm"><button>הכל</button><button class="on">פעילים</button><button>חדשים</button><button>רדומים</button></div>
+</body></html>

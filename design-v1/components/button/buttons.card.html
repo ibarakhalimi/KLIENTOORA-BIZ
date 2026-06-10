@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" viewport="700x230" name="Button" subtitle="5 וריאנטים · 3 גדלים · אייקון · disabled" -->
+<!DOCTYPE html>
+<html lang="he" dir="rtl"><head><meta charset="UTF-8"><link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 22px 24px; background: var(--surface); }
+  .grid { display: flex; flex-direction: column; gap: 16px; }
+  .row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .cap { width: 64px; font: var(--weight-semibold) 11px var(--font-sans); color: var(--text-faint); }
+  .nk-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-sans);
+    font-weight:var(--weight-semibold);border:1.5px solid transparent;border-radius:var(--radius-sm);cursor:pointer;
+    transition:var(--transition-colors),box-shadow var(--duration-fast),transform var(--duration-fast);}
+  .nk-btn:active{transform:translateY(1px) scale(0.99);}
+  .nk-btn[disabled]{opacity:.5;pointer-events:none;}
+  .nk-btn--sm{height:36px;padding:0 14px;font-size:13px;}
+  .nk-btn--md{height:44px;padding:0 18px;font-size:14px;}
+  .nk-btn--lg{height:52px;padding:0 24px;font-size:15.5px;border-radius:var(--radius-md);}
+  .nk-btn--primary{background:var(--brand);color:#fff;box-shadow:var(--shadow-brand);}
+  .nk-btn--primary:hover{background:var(--brand-hover);}
+  .nk-btn--secondary{background:var(--surface);color:var(--text-body);border-color:var(--border-strong);}
+  .nk-btn--subtle{background:var(--brand-subtle);color:var(--brand);}
+  .nk-btn--ghost{background:transparent;color:var(--text-secondary);}
+  .nk-btn--ghost:hover{background:var(--neutral-100);}
+  .nk-btn--danger{background:var(--danger);color:#fff;}
+  svg{width:18px;height:18px}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="row">
+      <span class="cap">וריאנטים</span>
+      <button class="nk-btn nk-btn--primary nk-btn--md">צור קמפיין</button>
+      <button class="nk-btn nk-btn--secondary nk-btn--md">ביטול</button>
+      <button class="nk-btn nk-btn--subtle nk-btn--md">הצג הכל</button>
+      <button class="nk-btn nk-btn--ghost nk-btn--md">דלג</button>
+      <button class="nk-btn nk-btn--danger nk-btn--md">מחק</button>
+    </div>
+    <div class="row">
+      <span class="cap">גדלים</span>
+      <button class="nk-btn nk-btn--primary nk-btn--sm">Small</button>
+      <button class="nk-btn nk-btn--primary nk-btn--md">Medium</button>
+      <button class="nk-btn nk-btn--primary nk-btn--lg">Large</button>
+    </div>
+    <div class="row">
+      <span class="cap">אייקון</span>
+      <button class="nk-btn nk-btn--primary nk-btn--md"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>הוסף הטבה</button>
+      <button class="nk-btn nk-btn--subtle nk-btn--md">המשך<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 6l-6 6 6 6"/></svg></button>
+      <button class="nk-btn nk-btn--primary nk-btn--md" disabled>Disabled</button>
+    </div>
+  </div>
+</body></html>
