@@ -155,6 +155,103 @@
 .data-table tbody tr { transition: var(--transition-colors); }
 .data-table tbody tr:hover { background: var(--neutral-50); }
 .data-table tbody tr:last-child td { border-bottom: none; }
+.data-table__row--clickable { cursor: pointer; }
+.data-table__row--clickable:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--brand);
+}
+
+/* ---- Member profile modal ---------------------------------- */
+.member-profile {
+  display: grid;
+  gap: 18px;
+}
+
+.member-profile__hero {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-50);
+}
+
+.member-profile__hero h3 {
+  margin: 0 0 6px;
+  font-size: var(--text-h3);
+  color: var(--text-primary);
+}
+
+.member-profile__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.member-profile__detail {
+  display: grid;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.member-profile__detail span,
+.member-profile__linked-item span,
+.member-profile__note {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.member-profile__detail b,
+.member-profile__linked-item b {
+  color: var(--text-primary);
+  font-weight: var(--weight-semibold);
+  word-break: break-word;
+}
+
+.member-profile__note {
+  margin: 0;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-subtle);
+  color: var(--brand);
+}
+
+.member-profile__linked {
+  display: grid;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.member-profile__linked h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.member-profile__linked-list {
+  display: grid;
+  gap: 8px;
+}
+
+.member-profile__linked-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-50);
+}
+
+.member-profile__linked-item div {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
 
 /* ---- Responsive -------------------------------------------- */
 @media (max-width: 1100px) {
@@ -188,6 +285,295 @@
   .stats-grid,
   .actions-grid,
   .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .member-profile__grid { grid-template-columns: minmax(0, 1fr); }
   .app-content { padding: 16px; }
   .app-topbar { padding: 0 16px; }
+}
+
+/* ---- Public club form -------------------------------------- */
+.club-form-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.45)),
+    radial-gradient(circle at 80% 10%, rgba(56, 189, 248, 0.22), transparent 30%),
+    radial-gradient(circle at 15% 85%, rgba(244, 114, 182, 0.18), transparent 28%),
+    var(--bg);
+}
+
+.club-form-shell {
+  width: min(100%, 760px);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 28px;
+}
+
+.club-form-shell--success {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 14px;
+  max-width: 560px;
+}
+
+.club-form-progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.club-form-dot {
+  width: 34px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--neutral-200);
+}
+
+.club-form-dot.active,
+.club-form-dot.done {
+  background: var(--brand);
+}
+
+.club-form-kicker {
+  margin: 0 0 8px;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--brand);
+}
+
+.club-form-shell h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: 0;
+}
+
+.club-form-copy {
+  max-width: 590px;
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: var(--text-lg);
+  line-height: 1.65;
+}
+
+.club-form-welcome,
+.club-form-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.club-form-benefits {
+  display: grid;
+  gap: 12px;
+}
+
+.club-form-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-50);
+}
+
+.club-form-benefit-icon,
+.club-form-success-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--brand);
+  background: var(--brand-subtle);
+}
+
+.club-form-success-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.club-form-benefit h2 {
+  margin: 0 0 4px;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.club-form-benefit p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.club-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.club-form-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.club-form-select-wrap span {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--text-body);
+}
+
+.club-form-select-wrap select {
+  height: 44px;
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+  padding: 0 13px;
+  outline: none;
+  transition: var(--transition-colors), box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.club-form-select-wrap select:focus {
+  border-color: var(--brand);
+  box-shadow: var(--ring);
+}
+
+.club-form-linked-list {
+  display: grid;
+  gap: 14px;
+}
+
+.club-form-linked-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--neutral-50);
+}
+
+.club-form-linked-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.club-form-linked-title h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--text-base);
+}
+
+.club-form-linked-title button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+.club-form-linked-title button:hover {
+  color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.club-form-limit {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.club-form-error {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-sm);
+  background: var(--danger-bg);
+  color: var(--danger);
+  font-size: var(--text-sm);
+}
+
+.club-form-choice {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.club-form-choice button {
+  min-height: 62px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-body);
+  font: inherit;
+  font-weight: var(--weight-semibold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+.club-form-choice button:hover,
+.club-form-choice button.selected {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--brand-subtle);
+}
+
+.club-form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .club-form-page {
+    align-items: stretch;
+    padding: 16px;
+  }
+
+  .club-form-shell {
+    padding: 22px;
+    border-radius: var(--radius-md);
+  }
+
+  .club-form-shell h1 {
+    font-size: 28px;
+  }
+
+  .club-form-copy {
+    font-size: var(--text-base);
+  }
+
+  .club-form-grid,
+  .club-form-choice {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .club-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .club-form-actions .nk-btn {
+    width: 100%;
+  }
 }

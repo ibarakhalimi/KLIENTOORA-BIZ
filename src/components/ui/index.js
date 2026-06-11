@@ -7,3 +7,4 @@ export { StatTile } from './StatTile.jsx';
 export { SegmentedTabs } from './SegmentedTabs.jsx';
 export { ProgressRing } from './ProgressRing.jsx';
 export { Icon } from './Icon.jsx';
+export { Modal } from './Modal.jsx';

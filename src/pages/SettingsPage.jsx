@@ -2,6 +2,7 @@ import React from 'react';
 import { PageHeader } from '../components/PageHeader.jsx';
 import { Badge, Button, Card, CardHeader, Icon, Input } from '../components/ui/index.js';
 import { businessSettings, clubSettings, integrations } from '../data/mockData.js';
+import { CURRENT_BUSINESS_ID } from '../config/business.js';
 
 function IntegrationRow({ item, first }) {
   return (
@@ -30,6 +31,9 @@ function IntegrationRow({ item, first }) {
 }
 
 export function SettingsPage() {
+  const business = businessSettings.business_id === CURRENT_BUSINESS_ID ? businessSettings : null;
+  const club = clubSettings.business_id === CURRENT_BUSINESS_ID ? clubSettings : null;
+
   return (
     <>
       <PageHeader
@@ -39,25 +43,29 @@ export function SettingsPage() {
       />
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: 860 }}>
-        <Card>
-          <CardHeader title="פרטי העסק 🏪" subtitle="הפרטים שיוצגו לחברי המועדון" />
-          <div className="form-grid">
-            <Input label="שם העסק" defaultValue={businessSettings.name} />
-            <Input label="טלפון" type="tel" defaultValue={businessSettings.phone} />
-            <Input label="אימייל" type="email" defaultValue={businessSettings.email} />
-            <Input label="כתובת" defaultValue={businessSettings.address} />
-          </div>
-        </Card>
+        {business && (
+          <Card>
+            <CardHeader title="פרטי העסק 🏪" subtitle="הפרטים שיוצגו לחברי המועדון" />
+            <div className="form-grid">
+              <Input label="שם העסק" defaultValue={business.name} />
+              <Input label="טלפון" type="tel" defaultValue={business.phone} />
+              <Input label="אימייל" type="email" defaultValue={business.email} />
+              <Input label="כתובת" defaultValue={business.address} />
+            </div>
+          </Card>
+        )}
 
-        <Card>
-          <CardHeader title="הגדרות מועדון 🎯" subtitle="כללי הצבירה וההטבות של המועדון" />
-          <div className="form-grid">
-            <Input label="שם המועדון" defaultValue={clubSettings.clubName} />
-            <Input label="נקודות לכל ₪ קנייה" type="number" defaultValue={clubSettings.pointsPerShekel} />
-            <Input label="בונוס הצטרפות (נק׳)" type="number" defaultValue={clubSettings.welcomeBonus} />
-            <Input label="תוקף נקודות" defaultValue={clubSettings.pointsExpiry} />
-          </div>
-        </Card>
+        {club && (
+          <Card>
+            <CardHeader title="הגדרות מועדון 🎯" subtitle="כללי הצבירה וההטבות של המועדון" />
+            <div className="form-grid">
+              <Input label="שם המועדון" defaultValue={club.clubName} />
+              <Input label="נקודות לכל ₪ קנייה" type="number" defaultValue={club.pointsPerShekel} />
+              <Input label="בונוס הצטרפות (נק׳)" type="number" defaultValue={club.welcomeBonus} />
+              <Input label="תוקף נקודות" defaultValue={club.pointsExpiry} />
+            </div>
+          </Card>
+        )}
 
         <Card>
           <CardHeader title="אינטגרציות 🔌" subtitle="חיבורים עתידיים — יופעלו בשלבים הבאים" />
